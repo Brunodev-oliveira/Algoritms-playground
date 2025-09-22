@@ -5,7 +5,8 @@ Uma função em C para contar caracteres em strings UTF-8, desenvolvida como par
 
 ## 📋 Descrição
 
-Esta função implementa uma versão especializada do `strlen()` para strings UTF-8, com a particularidade de ignorar espaços em branco durante a contagem.
+Esta função implementa uma versão especializada do `strlen()` para strings UTF-8, com a particularidade de ignorar espaços em branco durante a contagem. A função `strlen()` da biblioteca padrão `string.h`, não faz a contagem corretamente em caso de caracteres UTF-8 e retorna os caracteres vazio como parte da contagem, algo indesejável em caso de tratamento de nomes compostos por exemplo. 
+
 
 ## 🚀 Funcionalidades
 
@@ -15,6 +16,13 @@ Esta função implementa uma versão especializada do `strlen()` para strings UT
 - Compatível com strings C padrão
 
 ## 📝 Como Usar
+
+### Protótipo da Função
+
+ 
+  ```c 
+  int strlen_utf8(char *str);
+  ```
 
 ### Parâmetros
 
@@ -28,19 +36,58 @@ Esta função implementa uma versão especializada do `strlen()` para strings UT
 
 ### Exemplo de Uso
 
-### Protótipo da Função
+```c
+#include <stdio.h>
+	int main() {
+	    char texto = "Hello world";
+	    int count = strlen_utf8(&texto);
+	    printf("Caracteres (sem espaços): %d\n", count);
+	    return 0;
+	}
+   ```
 
-   ```c
-   int strlen_utf8(char *str) ;
+## 📊 Lógica de Contagem
+
+A função utiliza a seguinte lógica:
+
+-   Percorre a string byte a byte
+    
+-   Considera apenas bytes ≤ 0xBF (parte de caracteres UTF-8)
+    
+-   Ignora especificamente o byte 0x20 (espaço em branco)
+    
+-   Incrementa o contador para bytes válidos
+    
+
+## 🎯 Aplicações
+
+-   Processamento de texto multilíngue
+    
+-   Análise de strings UTF-8
+    
+-   Projetos acadêmicos sobre encoding de caracteres
+    
+-   Sistemas que necessitam de contagem precisa de caracteres
+    
+
+## 📚 Disciplina
+
+Desenvolvido como parte do projeto de Programação de computadores 2 na Faculdade UniLasalle-RJ, Niterói.
+
+## 👨‍💻 Autor
+
+**Bruno Pereira de Oliveira**
+
+-   GitHub: https://github.com/Brunodev-oliveira
+    
+-   LinkedIn: https://www.linkedin.com/in/brunodev-oliveira/
+    
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 
-###### Parâmetros
 
-    str: Ponteiro para a string UTF-8 a ser analisada
 
-Valor de Retorno
 
-    Retorna o número de caracteres UTF-8 na string, excluindo espaços
-
-Exemplo de Uso
-   
