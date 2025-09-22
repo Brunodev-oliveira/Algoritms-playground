@@ -7,7 +7,7 @@ Este repositório é um armazenamento de diversos algoritmos, criados em diverso
 
 Este repositório está separado em pastas, cada um contendo um projeto de algoritmo individual. Você pode conhecer cada um individualmento indo em cada pasta nesta Raiz. 
 
-O proposito além do compartilhamento, é construir uma trilha de desenvolvimento da minha experiência.
+O propósito além do compartilhamento, é construir uma trilha de desenvolvimento da minha experiência.
 
 
 ## 👨‍💻 Autor
