@@ -34,7 +34,7 @@ Esta função implementa uma versão especializada do `strlen()` para strings UT
    int strlen_utf8(char *str) ;
 
 
-### Parâmetros
+###### Parâmetros
 
     str: Ponteiro para a string UTF-8 a ser analisada
 
