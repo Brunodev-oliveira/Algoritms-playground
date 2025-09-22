@@ -5,7 +5,7 @@ Este repositório é um armazenamento de diversos algoritmos, criados em diverso
 
 ## 📋 Descrição
 
-Este reposiório está separado em pastas, cada um contendo um projeto de algoritmo individual. Você pode conhecer cada um individualmento indo em cada pasta nesta Raiz. 
+Este repositório está separado em pastas, cada um contendo um projeto de algoritmo individual. Você pode conhecer cada um individualmento indo em cada pasta nesta Raiz. 
 
 O proposito além do compartilhamento, é construir uma trilha de desenvolvimento da minha experiência.
 
