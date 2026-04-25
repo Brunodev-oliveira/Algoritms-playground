@@ -1,11 +1,11 @@
 
-# strlen_utf8 - Contador de Caracteres UTF-8
+# capitalized_case - Formatador de strings
 
-Uma função em C para tranformar string para um formato capitalizado(primeira letra Maíuscula), com suporte ao Português. Desenvolvida como parte de um projeto acadêmico, que consistia em um Sistema de vendas em Linguagem C.
+Uma função em C para tranformar strings para um formato capitalizado(primeira letra Maíuscula), com suporte ao Português. Desenvolvida como parte de um projeto acadêmico, que consistia em um Sistema de vendas em Linguagem C.
 
 ## 📋 Descrição
 
-Esta função implementa uma código C de baixo nìvel que garante que qualquer string passado como parâmetro seja tranformada em um formato capitalizado. A função `capitalized_case()`, percorre byte a byte de uma string conferindo e tranformando a string, de modo que independende da forma que ela foi escrita no fim ela estarã em seu formato capitalizado.az a contagem corretamente em caso de caracteres UTF-8 e retorna os caracteres vazio como parte da contagem, algo indesejável em caso de tratamento de nomes compostos por exemplo. 
+Esta função implementa um código C de baixo nìvel que garante que qualquer string passada como parâmetro seja tranformada em um formato capitalizado. A função `capitalized_case()`, percorre byte a byte de uma string conferindo e tranformando a string, de modo que independentemente da forma que ela foi escrita, no fim ela estará em seu formato capitalizado. Faz a contagem corretamente em caso de caracteres UTF-8 e ignora os caracteres vazio(espaço em branco) na contagem, algo indesejável em caso de tratamento de nomes compostos por exemplo. 
 
 
 ## 🚀 Funcionalidades
@@ -21,17 +21,17 @@ Esta função implementa uma código C de baixo nìvel que garante que qualquer 
 
  
   ```c 
-  int strlen_utf8(char *str);
+  int capitalize_case(char *str);
   ```
 
 ### Parâmetros
 
--   `str`: Ponteiro para a string UTF-8 a ser analisada
+-   `str`: Ponteiro para a string que será formatada
     
 
 ### Valor de Retorno
-
--   Retorna o número de caracteres UTF-8 na string, excluindo espaços
+-   sem retorno de função
+-   modifica diretamente a string para formato capitalizado
     
 
 ### Exemplo de Uso
@@ -39,9 +39,9 @@ Esta função implementa uma código C de baixo nìvel que garante que qualquer 
 ```c
 #include <stdio.h>
 	int main() {
-	    char texto = "Hello world";
-	    int count = strlen_utf8(&texto);
-	    printf("Caracteres (sem espaços): %d\n", count);
+	    char texto = "hello world";
+	    capitalized_case(&texto);
+	    printf("String em formato capitalizado: %s\n", texto);
 	    return 0;
 	}
    ```
@@ -61,13 +61,13 @@ A função utiliza a seguinte lógica:
 
 ## 🎯 Aplicações
 
--   Processamento de texto multilíngue
+-   Processamento de texto em Português
     
--   Análise de strings UTF-8
+-   Padronização de dados
     
 -   Projetos acadêmicos sobre encoding de caracteres
     
--   Sistemas que necessitam de contagem precisa de caracteres
+  
     
 
 ## 📚 Disciplina
